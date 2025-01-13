@@ -6,17 +6,17 @@
  - Set Up Environment Variable for g++
  - Use the following command for compiling:
   `g++ [cpp file name with extendsion] -o [exe file name]`
-  - To run it si,ply type:
+  - To run it simply type:
   `[exe file name]`
 
-  * Final code will be something like:
+  * Example:
   `g++ main.cpp -o main && main`
 
 
 ## MSVC COMPILER
  - Download MSVC 2022 Redistribution
  - Install
- - Open a "Developer COmmand Prompt"
+ - Open a "Developer Command Prompt"
  - Use `cl \EHsc [cpp filename]`
 
  * Example:
