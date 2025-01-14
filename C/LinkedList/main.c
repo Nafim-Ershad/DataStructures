@@ -43,6 +43,83 @@ void insertAtHead(struct Node** head, int data)
     *head = newNode;
 }
 
+int listLength(struct Node* head)
+{
+    int length = 0;
+    struct Node* temp = head;
+    while(temp != NULL)
+    {
+        length++;
+        temp = temp->next;
+    }
+
+    return length;
+}
+
+void deleteFromFirst(struct Node** head)
+{
+    if (*head == NULL) {
+        printf("List is empty\n");
+        return;
+    }
+
+    struct Node* temp = *head;
+    *head = temp->next;
+    free(temp);
+}
+
+void deleteFromEnd(struct Node** head)
+{
+    if (*head == NULL) {
+        printf("List is empty\n");
+        return;
+    }
+
+    struct Node* temp = *head;
+    if(temp->next == NULL)
+    {
+        free(temp);
+        *head = NULL;
+        return;
+    }
+
+    while(temp->next->next != NULL)
+    {
+        // Check for the next node of the next node
+        temp = temp->next;
+    }
+    free(temp->next); // This points to the next node which is to be deleted
+    temp->next = NULL;
+}
+
+void deleteAtPosition(struct Node** head, int position)
+{
+    if (*head == NULL) {
+        printf("List is empty\n");
+        return;
+    }
+    if(position == 0)
+    {
+        deleteFromFirst(head);
+        return;
+    }
+
+    struct Node* temp = *head;
+    for(int i=0; temp != NULL && i<position-1; i++)
+    {
+        temp = temp->next;
+    }
+
+    if (temp == NULL || temp->next == NULL) {
+        printf("Position out of range\n");
+        return;
+    }
+    
+    struct Node* next = temp->next->next;
+    free(temp->next);
+    temp->next = next;
+}
+
 int dataExists(struct Node* head, int value)
 {
     struct Node* temp = head;
@@ -82,7 +159,9 @@ int main()
 
     insertAtHead(&head, 4);
 
-    dataExists(head, 5);
+    deleteAtPosition(&head, 2);
+
+    dataExists(head, 2);
 
     printList(head);
 

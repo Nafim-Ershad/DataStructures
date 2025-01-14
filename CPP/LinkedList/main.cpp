@@ -23,7 +23,7 @@ void insertAtHead(Node* &head, int data) // Insert at head
     head = n;   // Set head to n
 }
 
-void insertAtTail(Node* &head, int data) // Insert at tail
+void insertAtTail(Node* &head, int data) // Insert data at tail
 {
     Node* n = new Node(data);   // Create new node
     if(head == nullptr) // If head is nullptr
