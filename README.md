@@ -15,6 +15,7 @@ Welcome to the Data Structures repository! This repository contains implementati
 ## Languages
 
 - C++
+- C
 
 Feel free to explore the code and contribute by adding new data structures or improving existing ones.
 
