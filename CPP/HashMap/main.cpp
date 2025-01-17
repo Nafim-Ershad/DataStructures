@@ -5,11 +5,11 @@
 class Node
 {
 public:
-    char* key;
-    char* value;
+    const char* key;
+    const char* value;
     Node* next;
 
-    Node(char* key, char* value)
+    Node(const char* key, const char* value)
     {
         this->key = key;
         this->value = value;
@@ -28,7 +28,7 @@ class HashMap
     Node** arr;
 
     // Hash function to find index of key
-    int hashFunction(char* key)
+    int hashFunction(const char* key)
     {
         int bucketIndex;
         int sum=0, factor=31;
@@ -64,7 +64,7 @@ public:
             arr[i] = nullptr;
     }
 
-    void insert(char* key, char* value)
+    void insert(const char* key, const char* value)
     {
         // Find the index of the key
         int bucketIndex = hashFunction(key);
@@ -92,7 +92,7 @@ public:
         numOfElements++;
     }
 
-    void deleteKey(char* key)
+    void deleteKey(const char* key)
     {
         // Getting bucket index for the
         // given key
@@ -132,7 +132,7 @@ public:
 
     }
 
-    char* search(char* key)
+    const char* search(const char* key)
     {
         // Getting the bucket index for the given key
         int bucketIndex = hashFunction(key);
@@ -153,7 +153,7 @@ public:
         }
 
         // If no key found in the hashMap equal to the given key
-        char* errorMsg = "Oops! Key not found!";
+        const char* errorMsg = "Oops! Key not found!";
         return errorMsg;
     }
 
@@ -184,7 +184,10 @@ int main()
     hashMap.insert("age", "24");
     hashMap.insert("phone", "+8801869265844");
 
+    hashMap.deleteKey("name");
+
     std::cout << hashMap.search("age") << std::endl;
+    std::cout << hashMap.search("name") << std::endl;
 
     return 0;
 }
