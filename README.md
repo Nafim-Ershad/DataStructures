@@ -1,21 +1,22 @@
-# Data Structures Repository
+# Personal Data Structures Repository
 
 Welcome to the Data Structures repository! This repository contains implementations of various data structures in different programming languages.
 
 ## Contents
 
-- Arrays 
-- Linked Lists
-- Stacks
-- Queues
+- Arrays [x]
+- Linked Lists [x]
+- Stacks [x]
+- Queues [x]
 - Trees
 - Graphs
-- Hash Tables
+- Hash Maps [x]
 
 ## Languages
 
 - C++
 - C
+- Rust
 
 Feel free to explore the code and contribute by adding new data structures or improving existing ones.
 
@@ -31,4 +32,4 @@ Feel free to explore the code and contribute by adding new data structures or im
 
 No License used.
 
-Happy coding!
+Happy coding 💖📝!
