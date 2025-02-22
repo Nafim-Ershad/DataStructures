@@ -4,21 +4,23 @@ Welcome to the Data Structures repository! This repository contains implementati
 
 ## Contents
 
-- Arrays [x]
-- Linked Lists [x]
-- Stacks [x]
-- Queues [x]
+- Arrays [✔]
+- Linked Lists [✔]
+- Stacks [✔]
+- Queues [✔]
 - Trees
 - Graphs
-- Hash Maps [x]
+- Hash Maps [✔]
 
 ## Languages
 
 - C++
 - C
-- Rust
+- Rust [❌]
 
 Feel free to explore the code and contribute by adding new data structures or improving existing ones.
+
+*** Don't want to implement Data Structures in RUST. Not ideal ***
 
 ## Contributing
 
